@@ -16,3 +16,11 @@ export async function getHumidity() {
   const response = await request.get(`${URL}/humidity`)
   return response.text;
 }
+
+export async function getAllReadings() {
+  const responseF = await getTempF();
+  const responseC = await getTempC();
+  const responseH = await getHumidity();
+
+  return {tempF: responseF, tempC: responseC, humidity: responseH}
+}
