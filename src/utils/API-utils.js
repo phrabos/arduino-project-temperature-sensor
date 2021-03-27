@@ -1,6 +1,7 @@
 import request from 'superagent';
 
 const URL = 'http://192.168.0.14'
+const DEV_URL = 'https://temp-sensor-backend.herokuapp.com'
 
 export async function getTempF() {
   const response = await request.get(`${URL}/ftemperature`)
