@@ -4,17 +4,17 @@ const URL = 'http://192.168.0.14'
 const DEV_URL = 'https://temp-sensor-backend.herokuapp.com'
 
 export async function getTempF() {
-  const response = await request.get(`${DEV_URL}/api/vi/readings/ftemperature`)
+  const response = await request.get(`${DEV_URL}/api/v1/readings/ftemperature`)
   return response.text;
 }
 
 export async function getTempC() {
-  const response = await request.get(`${DEV_URL}/api/vi/readings/temperature`)
+  const response = await request.get(`${DEV_URL}/api/v1/readings/temperature`)
   return response.text;
 }
 
 export async function getHumidity() {
-  const response = await request.get(`${DEV_URL}/api/vi/readings/humidity`)
+  const response = await request.get(`${DEV_URL}/api/v1/readings/humidity`)
   return response.text;
 }
 
