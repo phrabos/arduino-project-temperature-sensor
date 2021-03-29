@@ -1,20 +1,20 @@
 import request from 'superagent';
 
-const URL = 'http://192.168.0.14'
+const URL = 'https://6f91936213dd.ngrok.io'
 const DEV_URL = 'https://temp-sensor-backend.herokuapp.com'
 
 export async function getTempF() {
-  const response = await request.get(`${DEV_URL}/api/v1/readings/ftemperature`)
+  const response = await request.get(`${URL}/api/v1/readings/ftemperature`)
   return response.text;
 }
 
 export async function getTempC() {
-  const response = await request.get(`${DEV_URL}/api/v1/readings/temperature`)
+  const response = await request.get(`${URL}/api/v1/readings/temperature`)
   return response.text;
 }
 
 export async function getHumidity() {
-  const response = await request.get(`${DEV_URL}/api/v1/readings/humidity`)
+  const response = await request.get(`${URL}/api/v1/readings/humidity`)
   return response.text;
 }
 
